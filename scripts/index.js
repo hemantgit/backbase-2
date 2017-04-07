@@ -88,7 +88,7 @@ angular.module("backbase", ["gridshore.c3js.chart", "ngAnimate"])
 			$scope.showWeatherDetail = function (index) {
 				let city = $scope.cities[index];
 				$scope.loadinDetail = true;
-				$scope.cityDetail = null;
+				$scope.cityDetail = {};
 
 				$http({
 					method: "GET",
@@ -168,7 +168,7 @@ angular.module("backbase", ["gridshore.c3js.chart", "ngAnimate"])
 
 			$scope.hideWeatherDetail = function () {
 				$scope.loadinDetail = false;
-				$scope.cityDetail = null;
+				$scope.cityDetail = {};
 			};
 
 			$scope.loadData();
