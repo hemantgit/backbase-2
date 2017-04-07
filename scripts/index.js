@@ -13,6 +13,7 @@ angular.module("backbase", ["gridshore.c3js.chart", "ngAnimate"])
 				$scope.cities = [];
 				$scope.loadinDetail = false;
 				$scope.cityDetail = null;
+				$scope.clock = null;
 
 				$http({
 					method: "GET",
@@ -88,8 +89,6 @@ angular.module("backbase", ["gridshore.c3js.chart", "ngAnimate"])
 				let city = $scope.cities[index];
 				$scope.loadinDetail = true;
 				$scope.cityDetail = null;
-
-				$scope.clock = null;
 
 				$http({
 					method: "GET",
